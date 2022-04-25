@@ -1,0 +1,27 @@
+﻿<Window x:Class="STP_ISS_analyzer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:STP_ISS_analyzer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Visibility="Visible" WindowStyle="ThreeDBorderWindow">
+    
+    <Grid>
+        <DockPanel>
+            <ToolBarTray DockPanel.Dock="Top">
+                <ToolBar>
+                    <Button Command="New" Content="New"></Button>
+                    <Button Command="Open" Content="Open"></Button>
+                    <Button Command="Save" Content="Save"></Button>
+                </ToolBar>
+                <ToolBar>
+                    <Button Click="Position_Click" Content="Позиции" Name="positionButton"></Button>
+                    <Button x:Name="Transmition"  Content="Переходы" ></Button>
+                    <Button Content="Расписание"></Button>
+                </ToolBar>
+            </ToolBarTray>
+        </DockPanel>
+
+    </Grid>
+</Window>
