@@ -6,18 +6,28 @@ using System.Threading.Tasks;
 
 namespace STP_ISS_analyzer.Models
 {
-    internal class Position
+    public class Position
     {
         
         public List<Transition> transitionsList = new List<Transition>();
 
-        public string Name { get; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public int chipAmount { get; set; }
 
-        public Position(string name)
+
+        public Position(string name, int id)
         {
-            Name = name;
+            this.name = name;
+            this.id = id;
 
             transitionsList = new List<Transition>();
         }
+
+        public void AddChip(int ammountToAdd)
+        {
+            this.chipAmount += ammountToAdd;
+        }
+
     }
 }

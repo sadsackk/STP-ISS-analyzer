@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace STP_ISS_analyzer.Models
 {
-    internal class Timetable
+    public class Connection
     {
-        
     }
 }

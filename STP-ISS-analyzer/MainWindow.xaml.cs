@@ -26,10 +26,5 @@ namespace STP_ISS_analyzer
             InitializeComponent();
         }
 
-        private void Position_Click(object sender, RoutedEventArgs e)
-        {
-
-
-        }
     }
 }

@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace STP_ISS_analyzer.Models
 {
-    internal class Transition
+    public class Transition
     {
+        public List<Position> positionList = new List<Position>();
+
+        public string Name { get; }
+
+        public Transition(string name)
+        {
+            Name = name;
+            positionList = new List<Position>();
+        }
     }
 }

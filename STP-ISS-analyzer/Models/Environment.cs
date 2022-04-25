@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace STP_ISS_analyzer.Models
 {
-    internal class Timetable
+    public class Environment
     {
+        private int timeStep { get; set; }
+        private int stepAmount { get; set; }
         
     }
 }
