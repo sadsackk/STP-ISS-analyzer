@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using STP_ISS_analyzer.Infrastructure.Commands;
 using STP_ISS_analyzer.ViewModels.Base;
+using System.Windows;
 
 namespace STP_ISS_analyzer.ViewModels
 {
@@ -25,6 +28,28 @@ namespace STP_ISS_analyzer.ViewModels
         {
             get => _Status;
             set => Set(ref _Status, value);
+        }
+
+        #region Commands
+
+        #region CloseAppCommand
+
+        public ICommand CloseAppCommand { get; }
+        
+        private void OnCloseAppCommandExecuted(object p)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private bool CanCloseAppCommandExecuted(object p) => true;
+
+        #endregion
+
+        #endregion
+
+        public MainWindowViewModel()
+        {
+            CloseAppCommand = new RelayCommand(OnCloseAppCommandExecuted, CanCloseAppCommandExecuted);
         }
     }
 }
