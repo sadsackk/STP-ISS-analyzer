@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:STP_ISS_analyzer.ViewModels"
+        xmlns:fa5="http://schemas.fontawesome.com/icons/"
         xmlns:local="clr-namespace:STP_ISS_analyzer"
         
         Title="{Binding Title}" Height="450" Width="800" Visibility="Visible" WindowStyle="ThreeDBorderWindow">
@@ -28,7 +29,12 @@
                 </StatusBarItem>
             </StatusBar>
             <TabControl>
-                <TabItem Header="Вкладка 1">
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text=" Позиции"/>
+                        </StackPanel>
+                    </TabItem.Header>
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50"/>
